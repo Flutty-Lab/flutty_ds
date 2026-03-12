@@ -11,3 +11,6 @@ dependencies:
     sdk: flutter
   flutty_ds:
     path: ../
+
+flutter:
+  uses-material-design: true
