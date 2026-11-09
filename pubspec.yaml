@@ -1,6 +1,6 @@
 name: flutty_ds
 description: "Design System for Flutter - tokens, components and UI primitives."
-version: 0.1.1
+version: 0.2.0
 homepage: https://github.com/Flutty-Lab/flutty_ds
 repository: https://github.com/Flutty-Lab/flutty_ds
 issue_tracker: https://github.com/Flutty-Lab/flutty_ds/issues
@@ -11,15 +11,15 @@ topics:
   - theming
 
 environment:
-  sdk: ">=3.5.0 <4.0.0"
-  flutter: ">=3.24.0"
+  sdk: ">=3.13.0 <4.0.0"
+  flutter: ">=3.47.0"
 
 
 dependencies:
   flutter:
     sdk: flutter
   bloc: ^9.0.0
-  equatable: ^2.0.5
+  equatable: ^3.0.0
   flutter_bloc: ^9.1.0
   shared_preferences: ^2.3.2
 
@@ -27,4 +27,4 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-  flutty_test: ^0.2.1
+  flutty_test: ^0.3.0

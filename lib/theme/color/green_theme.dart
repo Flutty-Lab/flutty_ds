@@ -10,17 +10,17 @@ class GreenTheme extends FluttyMaterialTheme {
 
   @override
   ThemeData light() => ThemeData(
-        useMaterial3: true,
-        colorScheme: lightScheme(),
-        snackBarTheme: customStackBar,
-      );
+    useMaterial3: true,
+    colorScheme: lightScheme(),
+    snackBarTheme: customStackBar,
+  );
 
   @override
   ThemeData dark() => ThemeData(
-        useMaterial3: true,
-        colorScheme: darkScheme(),
-        snackBarTheme: customStackBar,
-      );
+    useMaterial3: true,
+    colorScheme: darkScheme(),
+    snackBarTheme: customStackBar,
+  );
 
   static ColorScheme lightScheme() {
     return const ColorScheme(

@@ -3,9 +3,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutty_ds/theme/flutty_material_theme.dart';
 import 'package:flutty_ds/theme/logic/theme_cubit.dart';
 
+/// Builds the app subtree from the current [FluttyMaterialTheme] and
+/// [ThemeMode], typically a [MaterialApp].
 typedef AppBuilder = Widget Function(FluttyMaterialTheme theme, ThemeMode mode);
 
+/// Provides a [ThemeCubit] and rebuilds the app subtree when the selected
+/// theme or mode changes.
 class FluttyThemeWrapper extends StatefulWidget {
+  /// Creates a [FluttyThemeWrapper] with the initial [theme], [mode] and
+  /// [materialAppBuilder].
   const FluttyThemeWrapper({
     required this.theme,
     required this.mode,
@@ -13,8 +19,13 @@ class FluttyThemeWrapper extends StatefulWidget {
     super.key,
   });
 
+  /// Initial theme, before any persisted selection is applied.
   final FluttyMaterialTheme theme;
+
+  /// Initial theme mode, before any persisted selection is applied.
   final ThemeMode mode;
+
+  /// Builder invoked with the current theme and mode.
   final AppBuilder materialAppBuilder;
 
   @override

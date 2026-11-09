@@ -23,8 +23,9 @@ void main() {
       expect(capturedTheme.brightness, Brightness.light);
     });
 
-    testWidgets('colorScheme extension should return ColorScheme',
-        (tester) async {
+    testWidgets('colorScheme extension should return ColorScheme', (
+      tester,
+    ) async {
       late ColorScheme capturedColorScheme;
 
       await tester.pumpWidget(

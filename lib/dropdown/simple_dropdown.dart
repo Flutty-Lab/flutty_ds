@@ -38,28 +38,27 @@ class _SimpleDropdownState<T> extends State<SimpleDropdown<T>> {
 
   @override
   Widget build(BuildContext context) => Card(
-        margin: EdgeInsets.zero,
-        child: DropdownButton<T>(
-          padding: EdgeInsets.symmetric(horizontal: Dimens.doubleSpacing),
-          borderRadius:
-              BorderRadius.all(Radius.circular(Dimens.standardSpacing)),
-          isExpanded: true,
-          underline: const SizedBox.shrink(),
-          value: currentValue,
-          onChanged: widget.onChanged != null
-              ? (value) {
-                  setState(() {
-                    currentValue = value;
-                  });
-                  widget.onChanged!(value);
-                }
-              : null,
-          items: widget.values
-              .map(
-                (e) => DropdownMenuItem<T>(
-                    value: e, child: Text(widget.buildName(e))),
-              )
-              .toList(),
-        ),
-      );
+    margin: EdgeInsets.zero,
+    child: DropdownButton<T>(
+      padding: EdgeInsets.symmetric(horizontal: Dimens.doubleSpacing),
+      borderRadius: BorderRadius.all(Radius.circular(Dimens.standardSpacing)),
+      isExpanded: true,
+      underline: const SizedBox.shrink(),
+      value: currentValue,
+      onChanged: widget.onChanged != null
+          ? (value) {
+              setState(() {
+                currentValue = value;
+              });
+              widget.onChanged!(value);
+            }
+          : null,
+      items: widget.values
+          .map(
+            (e) =>
+                DropdownMenuItem<T>(value: e, child: Text(widget.buildName(e))),
+          )
+          .toList(),
+    ),
+  );
 }

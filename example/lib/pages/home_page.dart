@@ -15,16 +15,15 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         children: [
           FilledButton(
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const TokensDemoPage()),
-            ),
+            onPressed: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const TokensDemoPage())),
             child: const Text('Tokens'),
           ),
           const SizedBox(height: 12),
           FilledButton(
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const ThemeDemoPage()),
-            ),
+            onPressed: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => const ThemeDemoPage())),
             child: const Text('Theme'),
           ),
           const SizedBox(height: 12),

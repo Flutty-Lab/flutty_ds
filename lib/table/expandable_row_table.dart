@@ -11,8 +11,9 @@ class ExpandableRowTable extends StatelessWidget {
     this.secondColor = Colors.white54,
     this.radius,
     super.key,
-  }) : _elements =
-            elements.where((e) => e.displayBuilder?.call() ?? true).toList();
+  }) : _elements = elements
+           .where((e) => e.displayBuilder?.call() ?? true)
+           .toList();
 
   final List<ExpandedRowTableElement> _elements;
 

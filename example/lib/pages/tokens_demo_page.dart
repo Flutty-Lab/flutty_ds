@@ -48,9 +48,7 @@ class _ColorTile extends StatelessWidget {
         ),
       ),
       title: Text(name),
-      subtitle: Text(
-        '0x${color.toARGB32().toRadixString(16).padLeft(8, '0')}',
-      ),
+      subtitle: Text('0x${color.toARGB32().toRadixString(16).padLeft(8, '0')}'),
     );
   }
 }
