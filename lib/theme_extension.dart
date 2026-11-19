@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Shortcuts to access the ambient theme from a [BuildContext].
 extension BuildContextExtensions on BuildContext {
